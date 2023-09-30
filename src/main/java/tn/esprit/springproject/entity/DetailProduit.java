@@ -19,5 +19,8 @@ import java.sql.Date;
         public enum categorieProduit{
             Electromenager,Quincaillerie,Alimentaire
         }
+        @OneToOne(mappedBy = "detailProduit")
+        private Produit produit;
+
     }
 

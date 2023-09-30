@@ -21,5 +21,8 @@ public class DetailFacture implements Serializable {
 
 
 
-
+@ManyToOne
+    private Facture facture;
+@ManyToOne
+    private Produit produit;
 }

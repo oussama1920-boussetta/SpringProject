@@ -3,8 +3,10 @@ package tn.esprit.springproject.entity;
 import jakarta.persistence.*;
 
 import java.io.Serializable;
+import java.util.Set;
+
 @Entity
-@Table(name = "Fournisseur")
+@Table(name = "stock")
 
 public class Stock implements Serializable
 {
@@ -21,4 +23,7 @@ private int qte;
 
 
 
+
+    @OneToMany (cascade = CascadeType.ALL,mappedBy = "stock")
+    private Set<Produit> produits;
 }
